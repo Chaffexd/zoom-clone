@@ -35,7 +35,7 @@ const MeetingSetup = ({
       <h1 className="text-2xl font-bold">Setup</h1>
       <VideoPreview />
       <div className="flex h-16 items-center justify-center gap-3">
-        <label className="flex items-center justify-center gap-2 font-medium mt-8">
+        <label className="flex items-center justify-center gap-2 font-medium">
           <input
             type="checkbox"
             checked={isMicCamToggledOn}
@@ -44,16 +44,16 @@ const MeetingSetup = ({
           Join with mic and camera off
         </label>
         <DeviceSettings />
-        <Button
-          className="rounded-md bg-green-500 px-4 py-2.5"
-          onClick={() => {
-            call.join();
-            setIsSetupComplete(true);
-          }}
-        >
-          Join Meeting
-        </Button>
       </div>
+      <Button
+        className="rounded-md bg-green-500 px-4 py-2.5"
+        onClick={() => {
+          call.join();
+          setIsSetupComplete(true);
+        }}
+      >
+        Join Meeting
+      </Button>
     </div>
   );
 };
